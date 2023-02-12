@@ -18,5 +18,14 @@ public class Util {
         }
         return conn;
     }
+    private static Util INSTANCE;
+    private Util() {
+    }
+    public static Util getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new Util();
+        }
+        return INSTANCE;
+    }
 }
 
